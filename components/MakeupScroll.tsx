@@ -27,6 +27,8 @@ function getFrameNumbers(): number[] {
 
 const frameNumbers = getFrameNumbers();
 
+const BASE_PATH = "/makeup-artist-portfolio";
+
 export default function MakeupScroll({
     onLoadComplete,
     onProgressUpdate,
@@ -65,7 +67,7 @@ export default function MakeupScroll({
             return new Promise<void>((resolve) => {
                 const img = new Image();
                 const paddedNum = String(frameNum).padStart(3, "0");
-                img.src = `/frames/${paddedNum}.png`;
+                img.src = `${BASE_PATH}/frames/${paddedNum}.png`;
 
                 img.onload = () => {
                     loadedImages[index] = img;
