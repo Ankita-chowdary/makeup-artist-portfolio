@@ -30,7 +30,7 @@ export default function About() {
                     >
                         <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
                             <Image
-                                src="/frames/150.png"
+                                src="/makeup-artist-portfolio/frames/150.png"
                                 alt="Makeup Artist"
                                 fill
                                 className="object-cover"

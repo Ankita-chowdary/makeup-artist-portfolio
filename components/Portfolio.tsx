@@ -4,42 +4,44 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
+const BASE_PATH = "/makeup-artist-portfolio";
+
 const portfolioItems = [
     {
         id: 1,
         title: "Bridal Glam",
         category: "Bridal",
-        image: "/products/lipstick.png",
+        image: `${BASE_PATH}/products/lipstick.png`,
     },
     {
         id: 2,
         title: "Editorial Fantasy",
         category: "Editorial",
-        image: "/products/eyeshadow.png",
+        image: `${BASE_PATH}/products/eyeshadow.png`,
     },
     {
         id: 3,
         title: "Natural Beauty",
         category: "Natural",
-        image: "/frames/080.png",
+        image: `${BASE_PATH}/frames/080.png`,
     },
     {
         id: 4,
         title: "Bold & Dramatic",
         category: "Glam",
-        image: "/frames/120.png",
+        image: `${BASE_PATH}/frames/120.png`,
     },
     {
         id: 5,
         title: "Soft Romance",
         category: "Bridal",
-        image: "/frames/160.png",
+        image: `${BASE_PATH}/frames/160.png`,
     },
     {
         id: 6,
         title: "Avant-Garde",
         category: "Editorial",
-        image: "/frames/200.png",
+        image: `${BASE_PATH}/frames/200.png`,
     },
 ];
 
@@ -91,8 +93,8 @@ export default function Portfolio() {
                             key={category}
                             onClick={() => setActiveCategory(category)}
                             className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
-                                    ? "bg-gradient-to-r from-accent-pink to-accent-purple text-white shadow-lg shadow-accent-pink/30"
-                                    : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-white/10"
+                                ? "bg-gradient-to-r from-accent-pink to-accent-purple text-white shadow-lg shadow-accent-pink/30"
+                                : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-white/10"
                                 }`}
                         >
                             {category}
